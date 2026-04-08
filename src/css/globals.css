@@ -2,14 +2,14 @@
 
 :root {
     --fontSize: 16px;
-    --font__Family: "Kumbh Sans", sans-serif;
+    --fontFamily: "Kumbh Sans", sans-serif;
     --textBlack: hsl(220, 13%, 13%);
     --textWhite: hsl(0, 100%, 100%);
     --textGrey: hsl(219, 9%, 45%);
     --grayishBlue: hsl(220, 14%, 75%);
     --textGreyBold: hsl(216, 12%, 8%);
     --backgroundWhite: hsl(0, 100%, 100%);
-    --backgroundOrange: hsl(26, 100%, 55%);
+    --backgroundOrange: #F97316;
     --backgroundBlack: hsl(0, 0%, 0%);
 }
 
@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: var(--backgroundWhite);
-    font-family: var(--font__Family);
+    font-family: var(--fontFamily);
 }
 
 .container__app {
@@ -31,5 +31,4 @@ body {
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
 }

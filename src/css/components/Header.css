@@ -1,0 +1,79 @@
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.header__info {
+    gap: 40px;
+    width: auto;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    padding: 0px 0px 4px;
+}
+
+.header__info img {
+    cursor: pointer;
+}
+
+header nav {
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    color: var(--textGrey);
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+}
+
+.header__user {
+    width: 95px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__user img {
+    cursor: pointer;
+}
+
+.header__user .user__profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: .3s ease-in-out;
+}
+
+.header__user .user__profile:hover {
+    border: 2px solid hsl(26, 100%, 55%);
+}

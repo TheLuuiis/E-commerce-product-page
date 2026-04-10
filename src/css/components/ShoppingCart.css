@@ -1,0 +1,101 @@
+.container__shopping {
+    width: 368px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 75.1rem;
+    top: 5rem;
+    background: linear-gradient(
+        to bottom,
+        hsl(0, 100%, 100%),
+        hsl(210, 20%, 98%)
+    );
+}
+
+.title__shopping {
+    width: 73.72px;
+    height: 64px;
+    color: var(--textBlack);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: start;
+    padding: 20px;
+}
+
+.container__shop {
+    width: 100%;
+    height: 178px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shopping {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    padding: 8px 0px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.thum__shopping {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+}
+
+.price__shopping {
+    gap: 2px;
+    width: auto;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+.price__shopping p {
+    color: var(--textGrey);
+    font-size: 16px;
+    font-weight: 500;
+    text-align: start;
+}
+
+.price__shopping span {
+    gap: 7px;
+    color: var(--textGrey);
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+}
+
+.icon__delete {
+    width: 14px;
+    height: 16px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.icon__delete:hover {
+    filter: brightness(0);
+}
+
+.container__shop button {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    padding: 16px;
+    cursor: pointer;
+    font-family: var(--fontFamily);
+    transition: .3s ease-in-out;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: var(--backgroundOrange);
+}
+
+.container__shop button:hover {
+    opacity: 0.79;
+}

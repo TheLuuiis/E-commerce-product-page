@@ -1,8 +1,8 @@
 import { useState } from "react";
 import '../css/components/Main.css';
 
-import Add from '../assets/images/icon-plus.svg'
-import Subtract from '../assets/images/icon-minus.svg'
+import Add from '../assets/images/icon-plus.svg';
+import Subtract from '../assets/images/icon-minus.svg';
 import Cart from '../assets/images/icon-cart.svg';
 
 import img1 from "../assets/images/image-product-1.jpg";

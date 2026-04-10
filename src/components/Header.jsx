@@ -1,9 +1,16 @@
 import '../css/components/Header.css';
+import ShoppingCart from "./ShoppingCart";
 import Logo from '../assets/images/logo.svg';
 import ImgCart from '../assets/images/icon-cart.svg';
 import UserProfile from '../assets/images/image-avatar.png';
 
-const Header = () => {
+const Header = ({
+    carritoAbierto,
+    alternarCarrito,
+    cantidadCarrito,
+    eliminarCarrito,
+    precioUnitario
+}) => {
     return (  
         <header>
             <div className="header__info">
@@ -29,9 +36,17 @@ const Header = () => {
             </nav>
             </div>
             <div className="header__user">
-                <img src={ImgCart} alt="cart"/>
-                <img src={UserProfile} className='user__profile' alt="user__profile"/>
+                <img src={ImgCart} alt="cart" onClick={alternarCarrito}/>
+                <img src={UserProfile} className="user__profile" alt="user__profile"/>
             </div>
+            {carritoAbierto && (
+                <ShoppingCart
+                    cantidadCarrito={cantidadCarrito}
+                    precioUnitario={precioUnitario}
+                    eliminarCarrito={eliminarCarrito}
+                />
+            )
+            }
         </header>
     );
 }

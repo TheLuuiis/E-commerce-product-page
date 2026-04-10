@@ -15,7 +15,12 @@ import thumb2 from "../assets/images/image-product-2-thumbnail.jpg";
 import thumb3 from "../assets/images/image-product-3-thumbnail.jpg";
 import thumb4 from "../assets/images/image-product-4-thumbnail.jpg";
 
-const Main = () => {
+const Main = ({
+    cantidadSeleccionada,
+    aumentarCantidad,
+    disminuirCantidad,
+    agregarAlCarrito,
+}) => {
 
     const bigImages = [img1, img2, img3, img4];
     const thumbnails = [thumb1, thumb2, thumb3, thumb4];
@@ -65,17 +70,17 @@ const Main = () => {
                     </div>
                     <div className="container__buy">
                         <div className="amount">
-                            <button className="btn">
+                            <button className="btn" onClick={disminuirCantidad}>
                                 <img src={Subtract} alt="Subtract" />
                             </button>
                             <span>
-                                0
+                                {cantidadSeleccionada}
                             </span>
-                            <button className="btn">
+                            <button className="btn" onClick={aumentarCantidad}>
                                 <img src={Add} alt="Add"/>
                             </button>
                         </div>
-                        <button className="buy">
+                        <button className="buy" onClick={agregarAlCarrito}>
                             <img src={Cart} alt="Cart"/>
                             Add to cart
                         </button>

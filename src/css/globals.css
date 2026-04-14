@@ -19,16 +19,29 @@
     box-sizing: border-box;
 }
 
+html {
+    min-width: 300px;
+}
+
 body {
+    width: 100%;
+    min-width: 300px;
+    min-height: 100dvh;
     display: flex;
     justify-content: center;
     background-color: var(--backgroundWhite);
     font-family: var(--fontFamily);
 }
 
+img {
+    max-width: 100%;
+}
+
 .container__app {
-    width: 1280px;
+    width: 100%;
+    max-width: 1280px;
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
+    overflow-x: clip;
 }

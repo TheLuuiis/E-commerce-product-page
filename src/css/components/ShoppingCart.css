@@ -1,5 +1,5 @@
 .container__shopping {
-    width: 368px;
+    width: min(368px, calc(100vw - 2rem));
     height: auto;
     display: flex;
     flex-direction: column;
@@ -17,8 +17,8 @@
 }
 
 .title__shopping {
-    width: 73.72px;
-    height: 64px;
+    width: 100%;
+    min-height: 64px;
     color: var(--textBlack);
     font-size: 16px;
     font-weight: 600;
@@ -28,19 +28,21 @@
 
 .container__shop {
     width: 100%;
-    height: 178px;
+    min-height: 178px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .shopping {
     width: 100%;
-    height: 64px;
+    min-height: 64px;
     display: flex;
+    gap: 0.75rem;
     padding: 8px 0px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -53,8 +55,9 @@
 
 .price__shopping {
     gap: 2px;
-    width: auto;
-    height: 48px;
+    flex: 1;
+    min-width: 0;
+    min-height: 48px;
     display: flex;
     flex-direction: column;
 }
@@ -64,6 +67,7 @@
     font-size: 16px;
     font-weight: 500;
     text-align: start;
+    line-height: 1.35;
 }
 
 .price__shopping span {
@@ -72,6 +76,7 @@
     font-size: 16px;
     font-weight: 400;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .icon__delete {
@@ -113,3 +118,52 @@
     font-weight: 600;
     text-align: center;
  }
+
+@media (max-width: 768px) {
+    .container__shopping {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: min(420px, calc(100vw - 1.5rem));
+    }
+}
+
+@media (max-width: 420px) {
+    .container__shopping {
+        top: calc(100% + 8px);
+        width: calc(100vw - 1rem);
+        border-radius: 10px;
+    }
+
+    .title__shopping,
+    .container__shop {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .shopping {
+        align-items: flex-start;
+    }
+
+    .price__shopping p,
+    .price__shopping span,
+    .empty__cart,
+    .container__shop button {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container__shopping {
+        width: calc(100vw - 0.75rem);
+    }
+
+    .shopping {
+        gap: 0.5rem;
+    }
+
+    .price__shopping p,
+    .price__shopping span {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,138 @@
+.container__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    z-index: 20;
+}
+
+.modal__content {
+    width: min(100%, 550px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.25rem;
+}
+
+.modal__close {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modal__close img {
+    width: 20px;
+    height: 20px;
+    display: block;
+    filter: brightness(100);
+}
+
+.modal__product {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modal__image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.modal__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.modal__nav {
+    position: absolute;
+    top: 50%;
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 100%;
+    background: #ffffff;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal__nav img {
+    width: 14px;
+    height: 18px;
+    filter: brightness(0);
+}
+
+.modal__nav:hover {
+    background-color: #f5f5f5;
+}
+
+.modal__nav--previous {
+    left: -26px;
+}
+
+.modal__nav--next {
+    right: -26px;
+}
+
+.modal__thumbnails {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.modal__thumbnails img {
+    width: calc(25% - 0.75rem);
+    max-width: 96px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    opacity: 0.7;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.modal__thumbnails img.active {
+    opacity: 1;
+    border-color: var(--backgroundOrange);
+}
+
+.modal__thumbnails img:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .container__modal {
+        padding: 1rem;
+    }
+
+    .modal__nav {
+        width: 44px;
+        height: 44px;
+    }
+
+    .modal__nav--previous {
+        left: 0.75rem;
+    }
+
+    .modal__nav--next {
+        right: 0.75rem;
+    }
+
+    .modal__thumbnails {
+        gap: 0.75rem;
+    }
+}
